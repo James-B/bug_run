@@ -1,0 +1,5 @@
+{
+  "small_platform":{"sx":0,"sy":0,"cols":1,"tilew":70,"tileh":40,"frames":1,"rows":1,"spacingX":0,"spacingY":0},
+  "med_platform":{"sx":0,"sy":40,"cols":1,"tilew":140,"tileh":40,"frames":1,"rows":1,"spacingX":0,"spacingY":0},
+  "large_platform":{"sx":0,"sy":80,"cols":1,"tilew":210,"tileh":40,"frames":1,"rows":1,"spacingX":0,"spacingY":0}
+}

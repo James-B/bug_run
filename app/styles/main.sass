@@ -1,0 +1,78 @@
+body 
+  background-image: url(../images/pattern.gif)
+
+html, body
+  font-weight: normal
+  font-stretch: normal
+  height: 100%
+
+body
+  margin-top: 0px
+  -webkit-font-smoothing: subpixel-antialiased
+
+/* quintus container */  
+#quintus_container
+  width: 1024px
+  height: 672px
+  margin: 0 !important
+  #quintus
+    background: #252524 url('../images/background.svg') center center no-repeat
+    background-size: cover
+    /* set width/height to zoom */
+
+  #loading
+    margin: 0
+    padding: 0
+    position: absolute
+    width: 100%
+    height: 672px
+    text-align: center
+    z-index: 100
+    background: rgb(252,255,244)
+    background: -moz-radial-gradient(center, ellipse cover,  rgba(252,255,244,1) 0%, rgba(223,229,215,1) 40%, rgba(179,190,173,1) 100%)
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(252,255,244,1)), color-stop(40%,rgba(223,229,215,1)), color-stop(100%,rgba(179,190,173,1)))
+    background: -webkit-radial-gradient(center, ellipse cover,  rgba(252,255,244,1) 0%,rgba(223,229,215,1) 40%,rgba(179,190,173,1) 100%)
+    background: -o-radial-gradient(center, ellipse cover,  rgba(252,255,244,1) 0%,rgba(223,229,215,1) 40%,rgba(179,190,173,1) 100%)
+    background: -ms-radial-gradient(center, ellipse cover,  rgba(252,255,244,1) 0%,rgba(223,229,215,1) 40%,rgba(179,190,173,1) 100%)
+    background: radial-gradient(ellipse at center,  rgba(252,255,244,1) 0%,rgba(223,229,215,1) 40%,rgba(179,190,173,1) 100%)
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#b3bead',GradientType=1 )
+
+
+    .loading-title 
+      position: relative
+      top: 30%
+      font-family: 'Finger Paint', Arial, sans-serif
+      margin: -127px auto 0
+      width: 70%
+      text-align: center
+
+      h1
+        font-size: 8rem
+        color: #e83714
+
+    #loading-container
+      position: relative
+      top: 30%
+      margin: 0 auto
+      width: 70%
+      background-color: #ec655d
+      height: 40px
+
+      #loading-progress 
+        width: 0%
+        position: absolute
+        top: 0
+        left: 0
+        height: 40px
+        background-color: #f2da38
+        z-index: 10
+
+      .loading-text 
+        font-size: 30px
+        line-height: 40px
+        font-family: 'Finger Paint', Arial, sans-serif
+        z-index: 20
+        position: relative
+
+
+

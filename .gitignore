@@ -1,0 +1,18 @@
+node_modules
+app/index.html
+app/mobile.html
+dist
+.tmp
+.sass-cache
+app/components
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db

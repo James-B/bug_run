@@ -1,0 +1,4 @@
+{
+  "ui_level_button":{"sx":0,"sy":0,"cols":1,"spacingX":0,"spacingY":0,"tilew":344,"tileh":230,"frames":1},
+  "ui_level_button_locked":{"sx":344,"sy":0,"cols":1,"spacingX":0,"spacingY":0,"tilew":344,"tileh":230,"frames":1}
+}

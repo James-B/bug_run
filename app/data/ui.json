@@ -1,0 +1,14 @@
+{
+  "ui_audio_on": {"sx":2,"sy":2,"cols":1,"spacingX":0,"spacingY":0,"tilew":70,"tileh":70,"frames":1},
+  "ui_audio_off":{"sx":76,"sy":2,"cols":1,"spacingX":0,"spacingY":0,"tilew":70,"tileh":70,"frames":1},
+  "ui_music_on": {"sx":808,"sy":2,"cols":1,"spacingX":0,"spacingY":0,"tilew":70,"tileh":70,"frames":1},
+  "ui_music_off":{"sx":150,"sy":2,"cols":1,"spacingX":0,"spacingY":0,"tilew":70,"tileh":70,"frames":1},
+  "ui_star":{"sx":1208,"sy":2,"cols":1,"spacingX":0,"spacingY":0,"tilew":125,"tileh":125,"frames":1},
+  "ui_help_on": {"sx":732,"sy":2,"cols":1,"spacingX":2,"spacingY":0,"tilew":70,"tileh":70,"frames":1},
+  "ui_share_on": {"sx":1134,"sy":2,"cols":1,"spacingX":2,"spacingY":0,"tilew":70,"tileh":70,"frames":1},
+  "ui_fb_connect": {"sx":224,"sy":2,"cols":1,"spacingX":0,"spacingY":0,"tilew":251,"tileh":65,"frames":1},
+  "ui_fb_logout":{"sx":479,"sy":2,"cols":1,"spacingX":0,"spacingY":0,"tilew":251,"tileh":65,"frames":1},
+  "ui_left_arrow":{"sx":882,"sy":2,"cols":1,"spacingX":0,"spacingY":0,"tilew":80,"tileh":80,"frames":1},
+  "ui_right_arrow":{"sx":966,"sy":2,"cols":1,"spacingX":0,"spacingY":0,"tilew":80,"tileh":80,"frames":1},
+  "ui_up_arrow":{"sx":1050,"sy":2,"cols":1,"spacingX":0,"spacingY":0,"tilew":80,"tileh":80,"frames":1} 
+}
