@@ -13,23 +13,10 @@ window.Q = Quintus({
 .include("Sprites, Scenes, Input, 2D, Touch, UI, Anim, TMX, Audio")
 Q.setup('quintus', {
   maximize: false,
-  //upsampleWidth: 640,
- // upsampleHeight: 320,
-
-  width:   1024,        // Set the default width to 800 pixels
-  height:  672 ,        // Set the default height to 600 pixels
-
-//  width:   1024,        // Set the default width to 800 pixels
-//  height:  672 ,        // Set the default height to 600 pixels
-
-
-//  upsampleWidth:  1024,  // Double the pixel density of the 
-//  upsampleHeight:672  // game if the w or h is 420x320
-                        // or smaller (useful for retina phones)
-//  downsampleWidth: 2048, // Halve the pixel density if resolution
-//  downsampleHeight: 1244  // is larger than or equal to 1024x768
-
-});//.controls().touch()
+  width:   1024,
+  height:  672 ,
+  scaleToFit: true
+});
 
 Q.input.joypadControls();
 
