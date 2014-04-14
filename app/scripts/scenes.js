@@ -141,7 +141,6 @@ Q.scene("levelSelect", function(stage) {
         y: 0,
         w: w,
         h: h,
-        level: item + 1,        
         enabled: enabled
       });
     container.insert(button);
