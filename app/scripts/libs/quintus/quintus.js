@@ -1379,7 +1379,7 @@ var Quintus = function Quintus(opts) {
 
     if(elParent) {
       Q.wrapper = document.createElement("div");
-      Q.wrapper.id = id + '_container';
+      Q.wrapper.id = Q.el.id + '_container';
       Q.wrapper.style.width = w + "px";
       Q.wrapper.style.margin = "0 auto";
       Q.wrapper.style.position = "relative";
@@ -1399,6 +1399,36 @@ var Quintus = function Quintus(opts) {
     Q.height = parseInt(Q.el.height,10);
     Q.cssWidth = w;
     Q.cssHeight = h;
+
+    //scale to fit
+    if(options.scaleToFit) {
+      var factor = 1;
+
+      var winW = window.innerWidth*factor;
+      var winH = window.innerHeight*factor;
+      var winRatio = winW/winH;    
+      var gameRatio = Q.el.width/Q.el.height;
+      var scaleRatio = gameRatio < winRatio ? winH/Q.el.height : winW/Q.el.width;
+      var scaledW = Q.el.width * scaleRatio;
+      var scaledH = Q.el.height * scaleRatio;
+
+      Q.el.style.width = scaledW + "px"; 
+      Q.el.style.height = scaledH + "px"; 
+
+      if(Q.el.parentNode) {
+        Q.el.parentNode.style.width = scaledW + "px"; 
+        Q.el.parentNode.style.height = scaledH + "px"; 
+      }
+            
+      Q.cssWidth = parseInt(scaledW,10);
+      Q.cssHeight = parseInt(scaledH,10);     
+
+      //center vertically when adjusting to width
+      if(gameRatio > winRatio) {
+        var topPos = (winH - scaledH)/2;          
+        Q.el.style.top = topPos+'px';
+      }
+    }   
 
     window.addEventListener('orientationchange',function() {
       setTimeout(function() { window.scrollTo(0,1); }, 0);

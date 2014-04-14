@@ -258,16 +258,19 @@ Quintus.Input = function(Q) {
         gutter:10,
         controls: DEFAULT_TOUCH_CONTROLS,
         width: Q.width,
-        bottom: Q.height
+        bottom: Q.height,
+        fullHeight: false
       },opts);
 
       opts.unit = (opts.width / opts.controls.length);
       opts.size = opts.unit - 2 * opts.gutter;
 
       function getKey(touch) {
-        var pos = Q.input.touchLocation(touch);
+        var pos = Q.input.touchLocation(touch),
+            minY = opts.bottom - opts.unit;
         for(var i=0,len=opts.controls.length;i<len;i++) {
-          if(pos.x < opts.unit * (i+1) && pos.y > (Q.height - opts.unit)) {
+          var minX = opts.left + i * opts.unit + i * opts.gutter;
+          if(pos.x >=  minX && pos.x <= (minX+opts.unit) && (opts.fullHeight || (pos.y >= minY && pos.y <= (minY+opts.unit)))) {
             return opts.controls[i][0];
           }
         }
@@ -607,7 +610,7 @@ Quintus.Input = function(Q) {
 
         if(control[0]) {
           ctx.font = "bold " + (keypad.size/2) + "px arial";
-          var x = i * keypad.unit + keypad.gutter,
+          var x = keypad.left + i * keypad.unit + keypad.gutter,
               y = keypad.bottom - keypad.unit,
               key = Q.inputs[control[0]];
 
