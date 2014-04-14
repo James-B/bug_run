@@ -11,8 +11,8 @@ Q.load("level1.tmx, level2.tmx, level3.tmx, level4.tmx, level5.tmx, level6.tmx, 
 //      walk_left: { frames:  [0,1,2,3,4,5,6,7,8,9,10], rate: 1/15, flip:"x", loop: true },
 
     Q.animations("player", {
-      walk_right: { frames: [0, 1, 2, 3], rate: 1/10, flip: false, loop: true },
-      walk_left: { frames:  [0, 1, 2, 3], rate: 1/10, flip:"x", loop: true },
+      walk_right: { frames: [0, 1, 2, 3, 4, 5, 6, 7, 8], rate: 1/8, flip: false, loop: true },
+      walk_left: { frames:  [0, 1, 2, 3, 4, 5, 6, 7, 8], rate: 1/8, flip:"x", loop: true },
       jump_right: { frames: [13], rate: 1/10, flip: false },
       jump_left: { frames:  [13], rate: 1/10, flip: "x" },
       stand_right: { frames:[14], rate: 1/10, flip: false },
