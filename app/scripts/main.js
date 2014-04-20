@@ -19,7 +19,7 @@ Q.load("level1.tmx, level2.tmx, level3.tmx, level4.tmx, level5.tmx, level6.tmx, 
       stand_left: { frames: [14], rate: 1/10, flip:"x" },
       duck_right: { frames: [15], rate: 1/10, flip: false },
       duck_left: { frames:  [15], rate: 1/10, flip: "x" },
-      climb: { frames:  [16, 17], rate: 1/3, flip: false }
+      climb: { frames:  [16, 17], rate: 1/2, flip: false }
     });
 
     var EnemyAnimations = {

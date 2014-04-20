@@ -13,8 +13,8 @@ window.Q = Quintus({
 .include("Sprites, Scenes, Input, 2D, Touch, UI, Anim, TMX, Audio")
 Q.setup('quintus', {
   maximize: false,
-  width:   1024,
-  height:  672 ,
+  width:   568,
+  height:  320 ,
   scaleToFit: true
 });
 
@@ -95,6 +95,8 @@ Q.Game.saveScore = function (score, stars, level, id) {
 Q.AudioManager = {
   audioMuted: false,
   musicMuted: false,
+  musicPlaying: false,
+  music: "",
 
   init: function() {
     var isAudioMuted = localStorage.getItem(Q.Game.storageKeys.isAudioMuted),
@@ -112,9 +114,19 @@ Q.AudioManager = {
   playMusic: function(music) {
     if (!this.musicMuted) {
       Q.audio.play(music, { loop: true });
+      this.musicPlaying = true;
+      this.music = music;
     }
   },
   
+  stopMusic: function() {
+
+    if (this.musicPlaying) {
+      Q.audio.stop(this.music);
+      this.musicPlaying = false;
+    }
+  },
+
   playSound: function(sound) {
     if (!this.audioMuted) {
       Q.audio.play(sound, { loop: false });
@@ -146,26 +158,26 @@ Q.AudioManager = {
 Q.AudioManager.init();
 
 Q.Game.stageEndGameScreen = function() {
-  Q.audio.stop();
+  Q.AudioManager.stopMusic();
   Q.AudioManager.playSound("sad-trombone.mp3");
   Q.clearStages();
   Q.stageScene("endGame");
 };
 
 Q.Game.stageLevelSummaryScreen = function() {
-  Q.audio.stop();
+  Q.AudioManager.stopMusic();
   Q.clearStages();
   Q.stageScene("levelSummary");
 };
 
 Q.Game.stageLevelSelectScreen = function() {
-  Q.audio.stop();
+  Q.AudioManager.stopMusic();
   Q.clearStages();
   Q.stageScene("levelSelect");
 };
 
 Q.Game.stageHelpScreen = function() {
-  Q.audio.stop();
+  Q.AudioManager.stopMusic();
   Q.clearStages();
   Q.stageScene("help");
 };
