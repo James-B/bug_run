@@ -84,6 +84,7 @@ Quintus.Audio = function(Q) {
         var snd = Q.audio.playingSounds[key];
         if(!s || s === snd.assetName) {
           if(snd.stop) { snd.stop(0);  } else {  snd.noteOff(0); }
+          delete Q.audio.playingSounds[key];
         }
       }
     };
